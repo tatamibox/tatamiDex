@@ -23,8 +23,8 @@ const getPokemon = async id => {
     createPokemonInfo(pokemon);
 }
 // finish integration with pokeAPI 
-
-
+const body = document.querySelector('.body');
+const nav = document.querySelector('.nav');
 const pokedexOpenButton = document.querySelector('.openPokedex');
 const pokedexContainer = document.querySelector('.pokedex');
 const pokedexOpen = () => {
@@ -35,10 +35,29 @@ const wipeContainer = () => {
     pokedexContainer.innerHTML = '';
 }
 
+const backButtonScript = () => {
+    wipeContainer();
+    window.location.reload();
+}
+const createBackButton = () => {
+    const backButton = document.createElement('button');
+    backButton.classList.add('backButton');
+    backButton.addEventListener("click", backButtonScript);
+
+
+    backButton.innerText = '<==';
+    nav.appendChild(backButton);
+}
+
+
+
 
 const loadPokedex = () => {
+
     wipeContainer();
+    createBackButton();
     fetchPoke();
+
     pokedexContainer.style.flexDirection = 'row';
 }
 
