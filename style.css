@@ -58,7 +58,6 @@ body {
     text-transform: uppercase;
     margin: 1rem;
     padding: 2rem;
-    width: 25%;
     display: flex;
     justify-content: center;
     flex-direction: column;
