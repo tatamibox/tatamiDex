@@ -1,6 +1,13 @@
+// integration with PokeAPI
 const createPokemonInfo = (pokemon) => {
     const pokemonCard = document.createElement('div');
-    pokemonCard.innerHTML = `${pokemon.id}`;
+    pokemonCard.classList.add('pokemonCard');
+    const pokemonName = document.createElement('div');
+    pokemonName.innerHTML = `${pokemon.name}`;
+    const pokemonImg = document.createElement('img');
+    pokemonImg.src = `${pokemon.sprites.front_default}`;
+    pokemonCard.appendChild(pokemonImg);
+    pokemonCard.appendChild(pokemonName);
     pokedexContainer.appendChild(pokemonCard);
 }
 const fetchPoke = async () => {
@@ -15,9 +22,11 @@ const getPokemon = async id => {
     const pokemon = await res.json();
     createPokemonInfo(pokemon);
 }
+// finish integration with pokeAPI 
 
-const pokedexOpenButton = document.querySelector('.openPokedex')
-const pokedexContainer = document.querySelector('.pokedex')
+
+const pokedexOpenButton = document.querySelector('.openPokedex');
+const pokedexContainer = document.querySelector('.pokedex');
 const pokedexOpen = () => {
     alert('hello!');
 }
@@ -30,6 +39,7 @@ const wipeContainer = () => {
 const loadPokedex = () => {
     wipeContainer();
     fetchPoke();
+    pokedexContainer.style.flexDirection = 'row';
 }
 
 pokedexOpenButton.onclick = loadPokedex;
