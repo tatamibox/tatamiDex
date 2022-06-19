@@ -8,8 +8,9 @@ body {
 }
 
 .pokedex {
+
     background-color: #e63946;
-    width: auto;
+    align-items: center;
     max-width: 75%;
     display: flex;
     flex-direction: column;
@@ -43,10 +44,29 @@ body {
     margin-top: 0.5px;
 }
 
+.pokemonCard:hover {
+    -webkit-box-shadow: 33px 11px 70px -18px rgba(0, 0, 0, 0.84);
+    -moz-box-shadow: 33px 11px 70px -18px rgba(0, 0, 0, 0.84);
+    box-shadow: 33px 11px 70px -18px rgba(0, 0, 0, 0.84);
+}
+
 .pokemonCard {
-    box-shadow: black;
+    border-radius: 73px 73px 73px 73px;
+    -moz-border-radius: 73px 73px 73px 73px;
+    -webkit-border-radius: 73px 73px 73px 73px;
+    border: 0px solid #000000;
     text-transform: uppercase;
     margin: 1rem;
+    padding: 2rem;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transition: all 200ms ease-in-out;
 }
 
 .backButton {
