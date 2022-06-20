@@ -74,3 +74,105 @@ body {
     max-height: 65vh;
     cursor: pointer;
 }
+
+.pokemonCard2 {
+    border-radius: 73px 73px 73px 73px;
+    -moz-border-radius: 73px 73px 73px 73px;
+    -webkit-border-radius: 73px 73px 73px 73px;
+    border: 0px solid #000000;
+    text-transform: uppercase;
+    margin: 1rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    transition: all 200ms ease-in-out;
+    height: 65vh;
+}
+
+.pokemonCard2 img {
+    width: 10rem;
+}
+
+
+
+.pokeType {
+    border-radius: 95px 95px 95px 95px;
+    -moz-border-radius: 95px 95px 95px 95px;
+    -webkit-border-radius: 95px 95px 95px 95px;
+    border: 0px solid #000000;
+    width: auto;
+    padding: 0.5rem;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #e63946;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* pokemon types  */
+
+.grass {
+    background-color: #28a745;
+}
+
+.water {
+    background-color: #558fe6;
+}
+
+.electric {
+    background-color: #dbc118;
+}
+
+.rock {
+    background-color: #5c5631;
+}
+
+.bug {
+    background-color: #b8b867;
+}
+
+.ground {
+    background-color: #c2ae3a;
+}
+
+.fire {
+    background-color: #f5471b;
+}
+
+.normal {
+    background-color: #b8b6ab;
+}
+
+.purple {
+    background-color: #c23cc9;
+}
+
+.fairy {
+    background-color: #edbbf0;
+}
+
+.dragon {
+    background-color: #2a4ea8;
+}
